@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">        
+        <link rel="stylesheet" href="login.css">
+        <title>Tela de login</title>
+
+    </head>
+
+    <body>
+
+        <div id="card_login" class="container">
+            <div class="brand-logo"><i class="fa-solid fa-ghost logo-style" style="color: #00bd39;"></i></div>
+            <div class="titulo-style">SITE EXEMPLO</div>
+            <div class="inputs">
+                <label>EMAIL</label>
+                <input id="email" type="email" placeholder="exemplo@mail.com" />
+                <label>SENHA</label>
+                <input id="senha" type="password" placeholder="De 6 à 10 caracteres" minlength="6" maxlength="10"/>
+                <button class="botao-submit" type="submit" onclick="Login()">ENTRAR</button>
+            </div>
+            <label class="msg-login" id="mensagem_erro_login" style="margin-top: 10px;font-size: small;"></label>
+            <label style="margin-top: 10px;font-size: small;">Não Possui conta? Clique <a onclick="AlternaCards('cadastro')">aqui!</a></label>
+        </div>
+
+        <div id="card_cadastro" class="container-cadastro" style="display: none;">
+            <div class="brand-logo"><i class="fa-solid fa-ghost logo-style" style="color: #00bd39;"></i></div>
+            <div class="titulo-style">CADASTRO</div>
+            <div class="inputs">
+                <label>NOME</label>
+                <input id="nome_cadastro" type="text" placeholder="nome"/>
+                <label>SOBRENOME</label>
+                <input id="sobrenome_cadastro" type="text" placeholder="sobrenome"/>
+                <label>DATA DE NASCIMENTO</label>
+                <input id="data_nascimento_cadastro" type="text" placeholder="dd/mm/aaaa"/>
+                <label>EMAIL</label>
+                <input id="email_cadastro" type="email" placeholder="exemplo@mail.com" />
+                <label>SENHA</label>
+                <input id="senha_cadastro" type="text" placeholder="De 6 à 10 caracteres"  minlength="6" maxlength="10" />
+                <button class="botao-submit" type="submit" onclick="Cadastrar()">CADASTRAR</button>
+            </div>
+            <label class="msg-login" id="mensagem_erro_cadastro" style="margin-top: 10px;font-size: small;"></label>
+            <label style="margin-top: 10px;font-size: small;"><a onclick="AlternaCards('login')">Voltar a tela de login</a></label>
+        </div>
+
+    <footer>  
+    </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>    
+        <script src="login.js"></script>
+
+    </body>
+
+</html>
